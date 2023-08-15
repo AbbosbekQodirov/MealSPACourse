@@ -1,0 +1,70 @@
+body{
+  background-color: #091925;
+}
+
+nav {
+  padding: 0 1rem;
+  background-color: #162B3A;
+}
+
+.content {
+  min-height: calc(100vh - 70px - 64px);
+  padding: 1.5rem 0;
+}
+
+.list{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  color: white;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  background-color: #2D3748;
+  border-radius: 10px;
+  padding: 10px;
+}
+.card-content{
+  flex-grow: 1;
+}
+
+.recipe img{
+  max-width: 100%;
+  margin-top: 1rem;
+}
+.catList h2{
+  text-align: center;
+  color: white;
+}
+
+.page-footer{
+  background-color: #162B3A;
+}
+
+input{
+  color: white !important;
+}
+
+input:focus{
+  background-color: #2D3748 !important;
+}
+.meal{
+  color: white;
+}
+.meal_category{
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+
+}
+
+.btn{
+  background-color: #3f9cfb !important;
+}
+tr{
+  border-bottom: 1px solid white;
+}
