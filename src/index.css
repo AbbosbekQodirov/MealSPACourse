@@ -15,7 +15,7 @@ nav {
   text-transform: capitalize;
 }
 .content {
-  min-height: calc(100vh - 70px - 64px);
+  min-height: calc(100vh - 70px - 47px);
   padding: 1.5rem 0;
 }
 
@@ -85,4 +85,31 @@ tr{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.about{
+  color: white;
+  font-size: 30px;
+}
+.contact{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: start;
+}
+.contact a h4{
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 456px){
+.contact a h4 {
+    font-size: 1.2rem;
+    
+  }
+    .about {
+      font-size: 22px;
+    }
 }
