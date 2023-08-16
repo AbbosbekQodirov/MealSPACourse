@@ -5,10 +5,10 @@ function Header() {
   return (
     <nav>
       <div className="nav-wrapper">
-        <Link to="/" className="brand-logo">
+        <Link to="/" className="meal-logo">
           delicious food
         </Link>
-        <ul id="nav-mobile" className="right hide-on-med-and-down">
+        <ul id="" className="right ">
           <li>
             <Link to="/about">About</Link>
           </li>

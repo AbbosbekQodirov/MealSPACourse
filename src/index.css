@@ -10,9 +10,10 @@ nav {
 .nav-wrapper{
   padding: 0px 30px !important;
 }
-.brand-logo{
+.meal-logo{
   font-family: 'Dancing Script', cursive;
   text-transform: capitalize;
+  font-size: 32px;
 }
 .content {
   min-height: calc(100vh - 70px - 47px);
@@ -105,6 +106,9 @@ tr{
 }
 
 @media (max-width: 456px){
+  .meal-logo {
+      font-size: 22px;
+    }
 .contact a h4 {
     font-size: 1.2rem;
     
