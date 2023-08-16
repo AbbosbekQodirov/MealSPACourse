@@ -35,7 +35,7 @@ function Search({cb = Function.prototype}) {
           style={{
             position: "absolute",
             top: 6,
-            right: 6,
+            right: "1%",
           }}
           onClick={handleSubmit}
         >

@@ -49,9 +49,9 @@ function Meal() {
             className="btn"
           >
             {!showRecipe ? (
-              <span> Show Recipe </span>
+              <span> Show Ingredients </span>
             ) : (
-              <span> Hide Recipe </span>
+              <span> Hide Ingredients </span>
             )}
           </button>
           {showRecipe ? (

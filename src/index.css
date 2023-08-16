@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
 body{
   background-color: #091925;
 }
@@ -6,7 +7,13 @@ nav {
   padding: 0 1rem;
   background-color: #162B3A;
 }
-
+.nav-wrapper{
+  padding: 0px 30px !important;
+}
+.brand-logo{
+  font-family: 'Dancing Script', cursive;
+  text-transform: capitalize;
+}
 .content {
   min-height: calc(100vh - 70px - 64px);
   padding: 1.5rem 0;
@@ -38,8 +45,9 @@ nav {
   color: white;
 }
 
-.page-footer{
+.footer{
   background-color: #162B3A;
+  color: white;
 }
 
 input{
@@ -64,7 +72,17 @@ input:focus{
 
 .btn{
   background-color: #3f9cfb !important;
+  transition: all .2s ease;
+}
+.btn:hover{
+  background-color: #0080ff !important;
 }
 tr{
   border-bottom: 1px solid white;
+}
+
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
