@@ -8,6 +8,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 function Home() {
   const [catalog, setCatalog] = useState([]);
   const [filteredCatalog, setFilteredCatalog] = useState([]);
+  const [error, setError] = useState(false)
 
   const { pathname, search } = useLocation();
   const navigate = useNavigate();
@@ -27,31 +28,43 @@ function Home() {
 
   useEffect(() => {
     getAllCategories().then((data) => {
-      setCatalog(data.categories);
-      setFilteredCatalog(
-        search
-          ? data.categories.filter((item) =>
-              item.strCategory
-                .toLowerCase()
-                .includes(search.split("=")[1].toLowerCase())
-            )
-          : data.categories
-      );
+
+      if (data == "error") {
+        setError(true)
+      } else {
+        setCatalog(data.categories);
+        setFilteredCatalog(
+          search
+            ? data.categories.filter((item) =>
+                item.strCategory
+                  .toLowerCase()
+                  .includes(search.split("=")[1].toLowerCase())
+              )
+            : data.categories
+        );
+      }
     });
   }, [search]);
 
-  console.log(filteredCatalog);
-
-  return (
-    <>
-      <Search cb={handleSearch} />
-      {!catalog.length ? (
-        <Loader />
-      ) : (
-        <CategoryList catalog={filteredCatalog} />
-      )}
-    </>
-  );
+  if(error){
+    return (
+      <h2 className="error">
+        There is a problem with the Internet Please check your Internet
+        connection and try again
+      </h2>
+    );
+  }else{
+    return (
+      <>
+        <Search cb={handleSearch} />
+        {!catalog.length ? (
+          <Loader />
+        ) : (
+          <CategoryList catalog={filteredCatalog} />
+        )}
+      </>
+    );
+  }
 }
 
 export default Home;

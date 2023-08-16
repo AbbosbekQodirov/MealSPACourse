@@ -49,6 +49,7 @@ nav {
 .footer{
   background-color: #162B3A;
   color: white;
+  
 }
 
 input{
@@ -104,6 +105,15 @@ tr{
   align-items: center;
   gap: 20px;
 }
+.brand-logo {
+ font-family: 'Dancing Script', cursive;
+}
+
+
+
+.error{
+  color: white;
+}
 
 @media (max-width: 456px){
   .meal-logo {
@@ -117,4 +127,7 @@ tr{
       font-size: 22px;
       line-height: 35px;
     }
+        .error {
+          font-size: 22px;
+        }
 }
