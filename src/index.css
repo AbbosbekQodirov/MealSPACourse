@@ -15,6 +15,16 @@ nav {
   text-transform: capitalize;
   font-size: 32px;
 }
+
+.right{
+  display: flex;
+  gap: 20px;
+}
+
+.right a.active{
+  background-color: #091925;
+}
+
 .content {
   min-height: calc(100vh - 70px - 47px);
   padding: 1.5rem 0;
